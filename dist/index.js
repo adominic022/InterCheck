@@ -10,7 +10,11 @@ var createWindow = function () {
     // Create the browser window.
     var mainWindow = new electron_1.BrowserWindow({
         height: 600,
-        width: 800
+        width: 800,
+        resizable: false,
+        webPreferences: {
+            nodeIntegration: true
+        }
     });
     // and load the index.html of the app.
     mainWindow.loadFile(path.join(__dirname, '../src/index.html'));
@@ -36,6 +40,4 @@ electron_1.app.on('activate', function () {
         createWindow();
     }
 });
-// In this file you can include the rest of your app's specific main process
-// code. You can also put them in separate files and import them here.
 //# sourceMappingURL=index.js.map
