@@ -48,7 +48,8 @@ function backgroundProcess() {
 
     child.on('close', function (code) {
         if (code == 0)
-          setStatus('child process complete.');
+          {}
+        //setStatus('child process complete.');
         else
           setStatus('child process exited with code ' + code);
 

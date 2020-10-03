@@ -30,8 +30,8 @@ function backgroundProcess() {
         appendOutput('stderr: <' + data + '>');
     });
     child.on('close', function (code) {
-        if (code == 0)
-            setStatus('child process complete.');
+        if (code == 0) { }
+        //setStatus('child process complete.');
         else
             setStatus('child process exited with code ' + code);
         // getCommandOutput().style.background = "DarkGray";
