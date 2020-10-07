@@ -8,11 +8,14 @@ function setStatus(msg) {
 }
 function showOS() {
     if (is.windows()) {
-        appendOutput("Using Windows.");
+        //appendOutput("Using Windows.")
     }
     else {
         appendOutput("InterCheck does not support non-Window OS :(");
     }
+}
+function clearContent(elem) {
+    elem.value = '';
 }
 function backgroundProcess() {
     var process = require('child_process');
