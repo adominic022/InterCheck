@@ -25,7 +25,7 @@ function showOS() {
 }
 
 function clearContent(elem) {
-  elem.value = '';
+  document.getElementById('command-output').value = "";
 }
 
 function backgroundProcess() {
