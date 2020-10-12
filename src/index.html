@@ -7,19 +7,22 @@
     <title>InterCheck</title>
   </head>
   <body>
-    <h1>Ready?</h1>
-    Powered with Electron and NodeJS
-    <p>Internet connection:</p>
-    <a class="btn btn-info">TEST BTN</a>
+    <h1 style="text-align:center;">current connection:</h1>
 
     <hr>
-    <textarea rows="15" cols="70" id="command-output" disabled="true"></textarea>
     <div id="status"></div>
-    <hr>
-    <button onClick="clearContent();">
-     Clear
-    </button>
 
+    <div class="form-group purple-border">
+      <textarea class="form-control" style="overflow:auto;resize:none"
+      disabled="true" id="command-output" rows="8" cols="8"></textarea>
+    </div>
+    <hr>
+
+    <a class="btn btn-info" onClick="clearContent();">
+     Clear
+    </a>
+
+    <div class="footer">Powered with Electron and NodeJS</div>
 
     <script src="./proc-call.js"></script>
     <script>
@@ -27,11 +30,6 @@
         function getCommandOutput() { return document.getElementById("command-output");  };
         function getStatus()      { return document.getElementById("status");  };
         // End of GLUE
-
-        // Bootstrap, jquery
-        //let $ = require('jquery');
-        //require('popper.js');
-        //require('Bootstrap');
 
         backgroundProcess();
 
