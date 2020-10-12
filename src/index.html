@@ -2,15 +2,18 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/example.css" rel="stylesheet" id="styleSheet">
     <title>InterCheck</title>
   </head>
   <body>
     <h1>Ready?</h1>
     Powered with Electron and NodeJS
     <p>Internet connection:</p>
+    <a class="btn btn-info">TEST BTN</a>
 
     <hr>
-    <textarea rows="7" cols="80" id="command-output" disabled="true"></textarea>
+    <textarea rows="15" cols="70" id="command-output" disabled="true"></textarea>
     <div id="status"></div>
     <hr>
     <button onClick="clearContent();">
@@ -25,7 +28,13 @@
         function getStatus()      { return document.getElementById("status");  };
         // End of GLUE
 
+        // Bootstrap, jquery
+        //let $ = require('jquery');
+        //require('popper.js');
+        //require('Bootstrap');
+
         backgroundProcess();
+
     </script>
   </body>
 </html>

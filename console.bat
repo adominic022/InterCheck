@@ -9,10 +9,10 @@
 :: https://superuser.com/questions/346498/how-do-i-change-my-cmd-exe-to-english
 chcp 437 > NUL
 
+
 :loop
 
 SETLOCAL ENABLEDELAYEDEXPANSION
-
 cls
 
 SET count=1
